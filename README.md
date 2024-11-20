@@ -87,7 +87,7 @@ Respuesta (JSON):
 
 4. Borrar una URL
 
-    DELETE /shortcode/:shortCode
+    DELETE api/shortcode/:shortCode
     Descripción: Elimina una URL utilizando su código corto.
     Parámetro de ruta: shortCode (código corto existente)
     Respuesta (JSON):
