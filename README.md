@@ -34,16 +34,16 @@ Endpoints de la API
          "url": "https://example.com"
        }
 
-Respuesta (JSON):
+	Respuesta (JSON):
 
-    {
-        "id": 1,
-        "url": "http://google.com",
-        "shortCode": "pcty81yyon",
-        "timesAccessed": 1,
-        "createdAt": "2024-11-20T10:27:50.757Z",
-        "updatedAt": "2024-11-20T10:27:50.757Z"
-    }
+    	{
+   	  	"id": 1,
+        	"url": "http://google.com",
+        	"shortCode": "pcty81yyon",
+        	"timesAccessed": 1,
+        	"createdAt": "2024-11-20T10:27:50.757Z",
+        	"updatedAt": "2024-11-20T10:27:50.757Z"
+    	}
 
 2. Listar todas las URLs
 
