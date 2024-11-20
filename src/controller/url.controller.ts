@@ -1,9 +1,12 @@
 import { Url } from "../model/url";
 import { Request, Response } from "express"
 import createShortCode from "../utils/generateString";
-
+import isUrlValid from "../utils/validateURL";
 const createUrl = (req: Request, res: Response, url: Url[]) => {
     try {
+        if(!isUrlValid(req.body.url)){
+            return res.status(400).json(`Url has not valid format, ${req.body.url}`)
+        }
         const shortCode: string = createShortCode()
         const newUrl: Url = {
             id: url.length + 1,
@@ -14,7 +17,7 @@ const createUrl = (req: Request, res: Response, url: Url[]) => {
             updatedAt: new Date()
         }
         url.push(newUrl)
-        return res.status(200).json(url)
+        return res.status(201).json(url)
     } catch (error) {
         return res.status(500).json({ error: error })
     }
